@@ -17,9 +17,9 @@ public class DefaultFragment extends FragmentBase {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_first_start, container, false);
+        View view = inflater.inflate(R.layout.fragment_start, container, false);
 
-        final FloatingLabelEditText panField = (FloatingLabelEditText) view.findViewById(R.id.panField);
+        final FloatingLabelEditText panField = (FloatingLabelEditText) view.findViewById(R.id.owner_number);
         panField.getEditText().setType(TYPE_FORMATTED_INVISIBLE_MASK);
         panField.getEditText().setInputType(InputType.TYPE_CLASS_PHONE);
         panField.getEditText().setMask("dddd dd** **** dddd ddd");

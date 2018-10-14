@@ -20,6 +20,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:layout="@layout/fragment_first_start" />
+        tools:layout="@layout/fragment_start" />
 
 </android.support.v4.widget.NestedScrollView>
