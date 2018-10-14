@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FloatingLabelEditText">
+        <attr name="fl_text" format="string" />
+        <attr name="fl_textColor" format="color" />
+        <attr name="fl_hint" format="string" />
+        <attr name="fl_hintColor" format="color" />
+        <attr name="fl_caption" format="string" />
+        <attr name="fl_captionColor" format="color" />
+        <attr name="fl_captionSelectedColor" format="color" />
+        <attr name="fl_drawableBottom" format="integer" />
+    </declare-styleable>
+
+</resources>
