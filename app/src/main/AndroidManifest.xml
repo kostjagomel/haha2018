@@ -21,12 +21,15 @@
 
                 <action android:name="android.intent.action.VIEW" />
 
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <category android:name="android.intent.category.DEFAULT" />
-
-                <data android:scheme="http"
-                    android:host="bvgteam.side" />
-
+                <data android:scheme="http" android:host="bvgteam.side" />
+                <data android:scheme="https" android:host="bvgteam.side" />
+                <data android:scheme="https" android:host="www.bvgteam.side" />
+                <data android:scheme="http" android:host="www.bvgteam.side" />
             </intent-filter>
         </activity>
     </application>

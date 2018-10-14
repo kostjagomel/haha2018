@@ -22,34 +22,37 @@ public class DefaultFragment extends FragmentBase {
         final FloatingLabelEditText panField = (FloatingLabelEditText) view.findViewById(R.id.owner_number);
         panField.getEditText().setType(TYPE_FORMATTED_INVISIBLE_MASK);
         panField.getEditText().setInputType(InputType.TYPE_CLASS_PHONE);
-        panField.getEditText().setMask("dddd dd** **** dddd ddd");
+        panField.getEditText().setMask("+375 dd ddd dd dd");
 
         Button nextButton = view.findViewById(R.id.nextButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                HttpHelper.getInstance().getToken(new HttpHelper.HttpCallback() {
-                    @Override
-                    public void response(String response) {
-                        HttpHelper.getInstance().startPayment(response, new HttpHelper.HttpCallback() {
-                            @Override
-                            public void response(String response) {
-                                Log.d("pay","ok");
-                            }
+                hideKeyboard();
+                replaceFragmentWithoutStack(R.id.fragment, new PayFragment());
 
-                            @Override
-                            public void error(String error, String description) {
-                                Log.d("pay","ok");
-                            }
-                        });
-                    }
-
-                    @Override
-                    public void error(String error, String description) {
-                        Log.d("pay","ok");
-                    }
-                });
+//                HttpHelper.getInstance().getToken(new HttpHelper.HttpCallback() {
+//                    @Override
+//                    public void response(String response) {
+//                        HttpHelper.getInstance().startPayment(response, new HttpHelper.HttpCallback() {
+//                            @Override
+//                            public void response(String response) {
+//                                Log.d("pay","ok");
+//                            }
+//
+//                            @Override
+//                            public void error(String error, String description) {
+//                                Log.d("pay","ok");
+//                            }
+//                        });
+//                    }
+//
+//                    @Override
+//                    public void error(String error, String description) {
+//                        Log.d("pay","ok");
+//                    }
+//                });
 
 //                hideKeyboard();
 //                replaceFragmentWithoutStack(R.id.fragment, WebViewFragment.newInstance("https://ya.ru","yandex"));

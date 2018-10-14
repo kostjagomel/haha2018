@@ -35,4 +35,14 @@
         <item name="fl_captionSelectedColor">@color/colorTextHint</item>
     </style>
 
+    <style name="buttonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:textColor">@color/colorTextWait</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:gravity">center</item>
+    </style>
+
 </resources>

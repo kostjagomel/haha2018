@@ -5,7 +5,11 @@
     <color name="colorAccent">#fe7f73</color>
 
     <color name="colorText">#272727</color>
+    <color name="colorTextWait">#ffffff</color>
     <color name="colorTextHint">#4e4e4e</color>
     <color name="color_Error">#ff0000</color>
+
+    <color name="colorButton">#fe7f73</color>
+    <color name="colorButtonSelect">#ee6f63</color>
 
 </resources>
