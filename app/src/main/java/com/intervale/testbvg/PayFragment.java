@@ -17,42 +17,36 @@ public class PayFragment extends FragmentBase {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_start, container, false);
+        View view = inflater.inflate(R.layout.pay_fragment, container, false);
 
-//        final FloatingLabelEditText panField = (FloatingLabelEditText) view.findViewById(R.id.owner_number);
-//        panField.getEditText().setType(TYPE_FORMATTED_INVISIBLE_MASK);
-//        panField.getEditText().setInputType(InputType.TYPE_CLASS_PHONE);
-//        panField.getEditText().setMask("dddd dd** **** dddd ddd");
+        final FloatingLabelEditText panField = (FloatingLabelEditText) view.findViewById(R.id.pan_card);
+        panField.getEditText().setType(TYPE_FORMATTED_INVISIBLE_MASK);
+        panField.getEditText().setInputType(InputType.TYPE_CLASS_PHONE);
+        panField.getEditText().setMask("dddd dddd dddd dddd");
+
+        final FloatingLabelEditText expatyDate = (FloatingLabelEditText) view.findViewById(R.id.expaty_date);
+        expatyDate.getEditText().setType(TYPE_FORMATTED_INVISIBLE_MASK);
+        expatyDate.getEditText().setInputType(InputType.TYPE_CLASS_PHONE);
+        expatyDate.getEditText().setMask("dd/dd");
+
+        final FloatingLabelEditText cvc = (FloatingLabelEditText) view.findViewById(R.id.cvc);
+        cvc.getEditText().setType(TYPE_FORMATTED_INVISIBLE_MASK);
+        cvc.getEditText().setInputType(InputType.TYPE_CLASS_PHONE);
+        cvc.getEditText().setMask("ddd");
+
+        final FloatingLabelEditText amount = (FloatingLabelEditText) view.findViewById(R.id.amount);
+        amount.getEditText().setType(TYPE_FORMATTED_INVISIBLE_MASK);
+        amount.getEditText().setInputType(InputType.TYPE_CLASS_PHONE);
+        amount.getEditText().setMask("ddddddddd BYN");
 
         Button nextButton = view.findViewById(R.id.nextButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                HttpHelper.getInstance().getToken(new HttpHelper.HttpCallback() {
-                    @Override
-                    public void response(String response) {
-                        HttpHelper.getInstance().startPayment(response, new HttpHelper.HttpCallback() {
-                            @Override
-                            public void response(String response) {
-                                Log.d("pay","ok");
-                            }
+                hideKeyboard();
+                replaceFragmentWithoutStack(R.id.fragment, new PayFinshFramgment());
 
-                            @Override
-                            public void error(String error, String description) {
-                                Log.d("pay","ok");
-                            }
-                        });
-                    }
-
-                    @Override
-                    public void error(String error, String description) {
-                        Log.d("pay","ok");
-                    }
-                });
-
-//                hideKeyboard();
-//                replaceFragmentWithoutStack(R.id.fragment, WebViewFragment.newInstance("https://ya.ru","yandex"));
 
             }
         });

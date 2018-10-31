@@ -49,6 +49,7 @@
         android:layout_margin="@dimen/fab_margin"
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end"
-        app:srcCompat="@drawable/new_img" />
+        app:srcCompat="@drawable/new_img"
+        android:visibility="gone"/>
 
 </android.support.design.widget.CoordinatorLayout>

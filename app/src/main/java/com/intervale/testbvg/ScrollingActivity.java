@@ -25,6 +25,12 @@ public class ScrollingActivity extends AppCompatActivity {
         final String action = intent.getAction();
         final String data = intent.getDataString();
 
+        PayDataHelper payDataHelper = PayDataHelper.getInstance();
+        payDataHelper.setS("");
+        if(data!=null) {
+            payDataHelper.setS(data);
+        }
+
         HttpHelper.getInstance().init("https://openapi-entry.intervale.ru/api/v3/BELPEREVEDIMEWEB250Y9G76IEH6Z250/");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

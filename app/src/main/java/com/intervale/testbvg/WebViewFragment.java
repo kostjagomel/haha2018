@@ -118,7 +118,7 @@ public class WebViewFragment extends FragmentBase {
                 getMainActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        replaceFragmentWithoutStack(R.id.fragment, new DefaultFragment());
+                        replaceFragmentWithoutStack(R.id.fragment, new StartFragment());
                     }
                 });
 
@@ -156,7 +156,7 @@ public class WebViewFragment extends FragmentBase {
                     getMainActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            replaceFragmentWithoutStack(R.id.fragment, new DefaultFragment());
+                            replaceFragmentWithoutStack(R.id.fragment, new StartFragment());
                         }
                     });
 //                    closeFragment();

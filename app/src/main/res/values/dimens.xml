@@ -10,4 +10,5 @@
     <dimen name="floatingLabelHeight">64dp</dimen>
     <dimen name="fragment_margin">64dp</dimen>
     <dimen name="upin_wigth">192dp</dimen>
+    <dimen name="exp">80</dimen>
 </resources>

@@ -5,6 +5,11 @@
 	" — подарки на Дни Рождения и праздники\n "
 	" — пожертвования в благотворительные фонды.\n"
     </string>
+
+    <string name="large_text2">
+        "\n\nЭто Конверт для сбора денежных средств с банковских карт\n
+    </string>
+
     <string name="action_settings">Settings</string>
     <string name="back_url">https://www.rambler.ru/</string>
 </resources>

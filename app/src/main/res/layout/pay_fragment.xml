@@ -10,52 +10,90 @@
         android:id="@+id/about"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/large_text" />
+        android:text="@string/large_text2" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/floatingLabelHeight"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.intervale.testbvg.view.FloatingLabelEditText
+                android:id="@+id/pan_card"
+                style="@style/floatingLabelEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/spacing_small"
+                app:fl_caption="Введите карту" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.intervale.testbvg.view.FloatingLabelEditText
+                    android:id="@+id/expaty_date"
+                    style="@style/floatingLabelEditTextStyle"
+                    android:layout_width="@dimen/fragment_margin"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/spacing_small"
+                    app:fl_hint="**.**">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="@dimen/floatingLabelHeight"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="VALID THRU:" />
+                </com.intervale.testbvg.view.FloatingLabelEditText>
+
+                <com.intervale.testbvg.view.FloatingLabelEditText
+                    android:id="@+id/cvc"
+                    style="@style/floatingLabelEditTextStyle"
+                    android:layout_width="@dimen/fragment_margin"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:paddingLeft="@dimen/spacing_small"
+                    app:fl_hint="***" >
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CVC:" />
+                </com.intervale.testbvg.view.FloatingLabelEditText>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
 
     <com.intervale.testbvg.view.FloatingLabelEditText
-        android:id="@+id/title_field"
+        android:id="@+id/amount"
         style="@style/floatingLabelEditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="@dimen/spacing_small"
-        app:fl_caption="Название конверта *" />
+        app:fl_caption="Сумма взноса" />
 
-    <com.intervale.testbvg.view.FloatingLabelEditText
-        android:id="@+id/description_field"
-        style="@style/floatingLabelEditTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/spacing_small"
-        app:fl_caption="Описание конверта" />
-
-    <com.intervale.testbvg.view.FloatingLabelEditText
-        android:id="@+id/owner_number"
-        style="@style/floatingLabelEditTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/spacing_small"
-        app:fl_caption="Ваш номер телефона *" />
-
-    <com.intervale.testbvg.view.FloatingLabelEditText
-        android:id="@+id/owner_name"
-        style="@style/floatingLabelEditTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/spacing_small"
-        app:fl_caption="Ваша имя и фамилия" />
-
-    <com.intervale.testbvg.view.FloatingLabelEditText
-        android:id="@+id/destination_number"
-        style="@style/floatingLabelEditTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/spacing_small"
-        app:fl_caption="Номер получателя конверта" />
+    <!--<com.intervale.testbvg.view.FloatingLabelEditText-->
+        <!--android:id="@+id/destination_number"-->
+        <!--style="@style/floatingLabelEditTextStyle"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingLeft="@dimen/spacing_small"-->
+        <!--app:fl_caption="Номер получателя конверта" />-->
 
     <Button
         android:id="@+id/nextButton"
         style="@style/buttonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Создать Конверт " />
+        android:text="Добавить в Конверт " />
 </LinearLayout>
